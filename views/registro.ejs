@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registro</title>
+    <%- include('layout') %>
+</head>
+<body>
+    <div class="inicio">
+        <form class="login" action="/registro" method="post">
+            <!-- <legend>Registro de Usuario</legend> -->
+            <label for="username">Usuario nuevo</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Contraseña nueva</label>
+            <input type="password" id="password" name="password" required><br>
+            <button class="iniciar" type="submit">Registrarse</button>
+        </form>
+        <div class="descripcion">
+            <h2>Registro de usuario nuevo</h2>
+            <p>Hola este es la seccion de nuestro registro para nuevos usuarios</p>
+            <p>Ingrese un nombre de usuario y una contraseña valida de al menos 8 caracteres</p>
+            <p>Regresar al login <a class="registro" href="/">Dar click aqui</a></p>
+        </div>
+    </div>
+</body>
+</html>

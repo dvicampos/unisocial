@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Blog</title>
+    <%- include('layout') %>
+</head>
+
+<body>
+    <div class="inicio">
+        <form class="login" action="/login" method="post">
+            <label for="username">Usuario</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required><br>
+            <button class="iniciar" type="submit">Iniciar Sesión</button>
+        </form>
+        <div class="descripcion">
+            <h2>Bienvenidos al login</h2>
+            <p>Hola este es la seccion de nuestro login porfavor ingrese su usuario y contraseña</p>
+            <p>Sin tiene una cuenta puede crear una aqui </p>
+            <p>¿No tienes una cuenta? <a class="registro" href="/registro">Regístrate aquí</a></p>
+        </div>
+    </div>
+</body>
+</html>

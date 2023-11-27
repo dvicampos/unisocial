@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Editar Publicación</title>
+    <%- include('layout') %>
+</head>
+<body>
+    <%- include('cabecera') %>
+    <h1>Editar Publicación</h1>
+    <div class="publi">
+        <form class="nueva" action="/editar_publicacion/<%= publicacion.id %>" method="post"
+            enctype="multipart/form-data">
+            <label for="titulo">Título:</label>
+            <input class="ingreso" type="text" id="titulo" name="titulo" value="<%= publicacion.titulo %>" required><br>
+            <label for="contenido">Contenido:</label>
+            <textarea class="ingreso" id="contenido" name="contenido" rows="4"
+                required><%= publicacion.contenido %></textarea><br>
+            <label for="imagen">Nueva Imagen:</label>
+            <input class="img-enviar" type="file" name="imagen" id="imagen">
+            <input type="hidden" name="imagen_existente" value="<%= publicacion.imagen %>">
+            <button class="editar" type="submit">Guardar Cambios</button>
+        </form>
+        <a class="regresar" href="/mis_publicaciones">Regresar</a>
+    </div>
+</body>
+
+</html>

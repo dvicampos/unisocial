@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Perfil</title>
+    <%- include('layout') %>
+</head>
+
+<body>
+    <%- include('cabecera') %>
+    <h1>Editar Perfil</h1>
+    <div class="publi">
+        <form class="nueva" action="/editar_perfil" method="post">
+            <!-- Campo para el nombre de usuario -->
+            <label for="username">Nombre de Usuario:</label>
+            <input class="ingreso" type="text" name="username" id="username" value="<%= usuario.username %>">
+            
+            <!-- Campo para cambiar la contraseña (opcional) -->
+            <label for="password">Nueva Contraseña:</label>
+            <input class="ingreso" type="password" name="password" id="password">
+            
+            <input class="editar" type="submit" value="Guardar Cambios">
+        </form>
+        <a class="regresar" href="/mis_publicaciones">Volver a la página de inicio</a>
+    </div>
+</body>
+</html>

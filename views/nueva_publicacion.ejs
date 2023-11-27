@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Nueva Publicación</title>
+    <%- include('layout') %>
+</head>
+
+<body>
+    <%- include('cabecera') %>
+        <div class="publi">
+            <h1>Nueva Publicación</h1>
+            <form class="nueva" action="/nueva_publicacion" method="post" enctype="multipart/form-data">
+                <label for="titulo">Título:</label>
+                <input class="ingreso" type="text" id="titulo" name="titulo" required>
+                <br>
+                <br>
+                <label for="contenido">Contenido:</label>
+                <textarea class="ingreso" id="contenido" name="contenido" rows="4" required></textarea><br>
+                <label for="imagen">Imagen:</label>
+                <input class="img-enviar" type="file" name="imagen" id="imagen">
+                <button class="editar" type="submit">Publicar</button>
+            </form>
+            <a class="regresar" href="/mis_publicaciones">Regresar</a>
+        </div>
+</body>
+
+</html>

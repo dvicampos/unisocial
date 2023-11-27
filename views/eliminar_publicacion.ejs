@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Publicación</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <h1>Eliminar Publicación</h1>
+    <p>¿Estás seguro de que deseas eliminar esta publicación?</p>
+    <p>Título: <%= publicacion.titulo %></p>
+    <p>Contenido: <%= publicacion.contenido %></p>
+    <form action="/eliminar_publicacion/<%= publicacion.id %>" method="post">
+        <button type="submit">Confirmar Eliminación</button>
+    </form>
+</body>
+</html>

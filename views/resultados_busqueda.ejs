@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mis Publicaciones</title>
+        <%- include('layout') %>
+    </head>
+<body>
+    <%- include('cabecera') %>
+    <!-- <h1>Resultados de Búsqueda</h1> -->
+    <div class="publi">
+        <div class="cabecera">
+            <a class="regresar" href="/mis_publicaciones">Ver mis publicaciones</a>
+            <h1>Resultados para: <%= searchTerm %></h1>
+            <a href="/nueva_publicacion" class="btn-nueva-publicacion">Crear nueva publicación</a>
+        </div>
+        <ul class="lista">
+            <% publicaciones.forEach((publicacion) => { %>
+                <li class="item">
+                    <h3 class="sub"><%= publicacion.titulo %></h3>
+                    <p class="sub"><%= publicacion.contenido %></p>
+                    <p>
+                        <% if (publicacion.imagen) { %>
+                            <img class="img-cargada" src="data:image/jpeg;base64,<%= Buffer.from(publicacion.imagen).toString('base64') %>" alt="Imagen">
+                            <% } else { %>
+                                <!-- Si no hay imagen, puedes mostrar un marcador de posición o un mensaje -->
+                                <p>Sin imagen</p>
+                                <% } %>
+                    </p>
+                    <p class="usuario-id">
+                        <%= publicacion.username %>
+                    </p>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+    
+    <!-- <a href="/mis_publicaciones">Volver a Mis Publicaciones</a> -->
+</body>
+</html>

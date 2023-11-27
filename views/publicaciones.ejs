@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Publicaciones</title>
+    <%- include('layout') %>
+</head>
+
+<body>
+    <h1>Publicaciones</h1>
+    <% if (publicaciones.length > 0) { %>
+        <ul>
+            <% publicaciones.forEach((publicacion) => { %>
+                <li>
+                    <h3><%= publicacion.titulo %></h3>
+                    <p><%= publicacion.contenido %></p>
+                </li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No hay publicaciones disponibles.</p>
+    <% } %>
+</body>
+
+</html>
